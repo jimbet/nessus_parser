@@ -138,7 +138,7 @@ def create_docx(vulns_by_severity, output_file):
     doc = Document()
     
     # Add title
-    title = doc.add_heading('Nessus Vulnerability Report', 0)
+    title = doc.add_heading('Sir Jimbet - Nessus Vulnerability Report', 0)
     title.alignment = WD_ALIGN_PARAGRAPH.CENTER
     
     # Severity colors - Red, Orange, Yellow, Green, Blue
@@ -268,7 +268,7 @@ def create_docx(vulns_by_severity, output_file):
             
             # Add "Screenshot:" in bold
             p = screenshot_cell.paragraphs[0]
-            run_screenshot = p.add_run('Screenshot:\n\n')
+            run_screenshot = p.add_run('Screenshot/POC:\n\n')
             set_font(run_screenshot, FONT_CONFIG['name'], FONT_CONFIG['size'], bold=True)
             
             # Add plugin output in italic
