@@ -238,7 +238,7 @@ def create_docx(vulns_by_severity, output_file):
             header_run.font.name = FONT_CONFIG['name']
             set_cell_background(header_cell, severity_colors[severity])
 
-            # Set font color based on severity (black for yellow background, white for others)
+            # Set font color based on severity (black for yellow/green background, white for others)
             if severity == 'Medium' or severity == 'Low':
                 header_run.font.color.rgb = RGBColor(0, 0, 0)  # Black for yellow background
             else:
