@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Nessus Parser v1.6
+Nessus Parser v1.6a
 Author: Sir Jimbet (https://github.com/jimbet/)
 Export Nessus result to .nessus and parsed it
 """
@@ -216,7 +216,7 @@ def create_docx(vulns_by_severity, output_file):
             set_cell_background(header_cell, severity_colors[severity])
             
             # Set font color based on severity (black for yellow background, white for others)
-            if severity == 'Medium':
+            if severity == 'Medium' or severity == 'Low':
                 header_run.font.color.rgb = RGBColor(0, 0, 0)  # Black for yellow background
             else:
                 header_run.font.color.rgb = RGBColor(255, 255, 255)  # White for other backgrounds
